@@ -1,0 +1,9 @@
+{
+  "fixturesFolder": "e2e/fixtures",
+  "pluginsFile": "e2e/plugins/index.js",
+  "integrationFolder": "e2e/integration",
+  "screenshotsFolder": "e2e/screenshots",
+  "supportFile": "e2e/support/index.js",
+  "videosFolder": "e2e/videos",
+  "baseUrl": "http://localhost:8080"
+}
