@@ -1,3 +1,3 @@
 # react-graphql
 
-GraphQLを試す
+GraphQL を試す
