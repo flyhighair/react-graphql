@@ -1,9 +1,15 @@
 import { useQuery } from '@apollo/client';
-import { repositorySearchQuery } from './infrastructure/repo-search';
+import {
+  RateData,
+  RateVars,
+  repositorySearchQuery,
+} from './infrastructure/repo-search';
 import React from 'react';
 
-const App = () => {
-  const { loading, error, data } = useQuery(repositorySearchQuery);
+const App: React.FC = () => {
+  const { loading, error, data } = useQuery<RateData, RateVars>(
+    repositorySearchQuery,
+  );
 
   if (loading) {
     return <p>Loading...</p>;
@@ -12,13 +18,19 @@ const App = () => {
     return <p>Error: {error}</p>;
   }
 
-  return data.rates.map(({ currency, rate }) => (
+  if (!data) {
+    return <p>No Data</p>;
+  }
+
+  const rateList = data.rates.map(({ currency, rate }) => (
     <div key={currency}>
       <p>
         {currency}: {rate}
       </p>
     </div>
   ));
+
+  return <section>{rateList}</section>;
 };
 
 export default App;
