@@ -5,7 +5,7 @@
     "prebuild": "tsc --noEmit",
     "build": "webpack",
     "start": "webpack serve",
-    "test": "jest",
+    "test": "jest --watchAll",
     "test:ci": "jest --coverage --updateSnapshot --ci",
     "test:e2e": "cypress open",
     "lint": "eslint",
