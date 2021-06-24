@@ -15,7 +15,7 @@ const App: React.FC = () => {
     return <p>Loading...</p>;
   }
   if (error) {
-    return <p>Error: {error}</p>;
+    return <p>Error: {error.message}</p>;
   }
 
   if (!data) {
@@ -23,14 +23,16 @@ const App: React.FC = () => {
   }
 
   const rateList = data.rates.map(({ currency, rate }) => (
-    <div key={currency}>
-      <p>
-        {currency}: {rate}
-      </p>
-    </div>
+    <li key={currency}>
+      {currency}: {rate}
+    </li>
   ));
 
-  return <section>{rateList}</section>;
+  return (
+    <section>
+      <ul>{rateList}</ul>
+    </section>
+  );
 };
 
 export default App;
