@@ -12,14 +12,14 @@ const App: React.FC = () => {
   );
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p data-testId="result">Loading...</p>;
   }
   if (error) {
-    return <p>Error: {error.message}</p>;
+    return <p data-testId="result">Error: {error.message}</p>;
   }
 
   if (!data) {
-    return <p>No Data</p>;
+    return <p data-testId="result">No Data</p>;
   }
 
   const rateList = data.rates.map(({ currency, rate }) => (
@@ -29,7 +29,7 @@ const App: React.FC = () => {
   ));
 
   return (
-    <section>
+    <section data-testId="result">
       <ul>{rateList}</ul>
     </section>
   );
