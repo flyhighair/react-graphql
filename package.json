@@ -51,7 +51,7 @@
     "jest": "27.4.5",
     "lint-staged": "12.1.4",
     "prettier": "2.5.1",
-    "sass": "1.45.1",
+    "sass": "1.45.2",
     "sass-loader": "12.4.0",
     "style-loader": "3.3.1",
     "ts-jest": "27.1.2",
