@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "5.10.2",
     "@typescript-eslint/parser": "5.10.2",
     "babel-jest": "27.4.6",
-    "css-loader": "6.5.1",
+    "css-loader": "6.6.0",
     "cypress": "9.3.1",
     "esbuild-loader": "2.18.0",
     "eslint": "8.8.0",
